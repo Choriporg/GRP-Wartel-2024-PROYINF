@@ -9,4 +9,4 @@
 
 
 ## Wiki del proyecto
-Puede visitar la wiki en el siguiente (enlace)[https://github.com/Choriporg/GRP-Telware-2024-PROYINF/wiki].
+Puede visitar la wiki en el siguiente [enlace](https://github.com/Choriporg/GRP-Telware-2024-PROYINF/wiki).
