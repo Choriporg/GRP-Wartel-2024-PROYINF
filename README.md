@@ -19,7 +19,7 @@ Los requísitos previos para poder utilizar la interfaz son:
 
   Para la ejecución es:
 
-  npm start
+  <code> npm start </code>
   
 ***
 Si hay problema con las dependencias ejecutar en el root del proyecto react:
