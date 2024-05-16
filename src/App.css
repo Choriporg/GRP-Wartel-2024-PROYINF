@@ -4,11 +4,12 @@ body {
 }
 
 .App {
+  /* "visor de imagenes DICOM"*/
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  min-height: 100vh;
   color: green;
 }
 
@@ -24,6 +25,7 @@ input[type="file"] {
   border-radius: 5px;
 }
 
+
 input[type="file"]:hover {
   border-color: darkgreen;
 }
@@ -34,6 +36,7 @@ input[type="file"]:hover {
 
 img {
   width: 100%;
+  min-width: 100px;
   max-width: 500px;
   border: 2px solid green;
   border-radius: 5px;
@@ -42,7 +45,12 @@ img {
 
 /* App.css */
 .dicom-image {
-  width: 80%;
-  height: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
   border: 1px solid #ccc;
+  background-color: black;
 }
