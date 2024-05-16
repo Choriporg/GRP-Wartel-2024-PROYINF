@@ -11,7 +11,7 @@
 Puede visitar la wiki en el siguiente [enlace](https://github.com/Choriporg/GRP-Telware-2024-PROYINF/wiki).
 
 
-##Ejecución hito 3:
+## Ejecución hito 3:
 
 Los requísitos previos para poder utilizar la interfaz son:
 
@@ -20,3 +20,12 @@ Los requísitos previos para poder utilizar la interfaz son:
   Para la ejecución es:
 
   npm start
+  
+***
+Si hay problema con las dependencias ejecutar en el root del proyecto react:
+  
+<code>npm install @cornerstonejs/core
+npm install @cornerstonejs/tools
+npm install @cornerstonejs/streaming-image-volume-loader
+npm install react-scripts</code>
+
