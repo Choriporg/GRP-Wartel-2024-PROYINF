@@ -1,38 +1,48 @@
+/* App.css */
+body {
+  background-color: black;
+}
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  height: 100vh;
+  color: green;
 }
 
-.App-link {
-  color: #61dafb;
+input[type="file"] {
+  border: none;
+  outline: none;
+  background-color: black;
+  color: green;
+  font-size: 16px;
+  padding: 10px 20px;
+  cursor: pointer;
+  border: 2px solid green;
+  border-radius: 5px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+input[type="file"]:hover {
+  border-color: darkgreen;
+}
+
+.image-container {
+  margin-top: 20px;
+}
+
+img {
+  width: 100%;
+  max-width: 500px;
+  border: 2px solid green;
+  border-radius: 5px;
+}
+
+
+/* App.css */
+.dicom-image {
+  width: 80%;
+  height: 500px;
+  border: 1px solid #ccc;
 }
