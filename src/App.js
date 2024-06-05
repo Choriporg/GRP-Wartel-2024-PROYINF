@@ -1,4 +1,3 @@
-// App.js
 import React, { useState, useEffect } from "react";
 import * as cornerstone from "cornerstone-core";
 import * as cornerstoneWADOImageLoader from "cornerstone-wado-image-loader";
@@ -7,6 +6,7 @@ import "./App.css";
 
 function App() {
   const [imageSrc, setImageSrc] = useState(null);
+  const [showSubMenu, setShowSubMenu] = useState(false);
 
   useEffect(() => {
     if (imageSrc) {
@@ -57,13 +57,45 @@ function App() {
     });
   };
 
+  const toggleSubMenu = () => {
+    setShowSubMenu(!showSubMenu);
+  };
+
   return (
     <div className="App">
-      <h1>visor de imagenes DICOM</h1>
-      <input type="file" onChange={handleFileChange} />
-      <div className="dicom-image" id="dicomImage"></div>
+      <header className="App-header">
+        <h1>DICOM image viewer</h1>
+        <div className="buttons-container">
+          <div className="left-buttons">
+            <button onClick={toggleSubMenu}>Insertar Formas</button>
+            {showSubMenu && (
+              <div className="sub-menu">
+                <button>Elipse</button>
+                <button>Circulo</button>
+                <button>Poligonos</button>
+                <button>lineas</button>
+                <button>Angulos</button>
+              </div>
+            )}
+            <button>transversal</button>
+            <button>Coronal</button>
+            <button>Sagital</button>
+          </div>
+          <div className="right-button">
+            <button className="red-button">Eliminar Forma</button>
+          </div>
+        </div>
+      </header>
+      <main>
+        <div className="info-section">
+          <input type="file" onChange={handleFileChange} />
+          <p>Información sobre la imagen</p>
+        </div>
+        <div className="dicom-image" id="dicomImage"></div>
+      </main>
     </div>
   );
 }
 
 export default App;
+

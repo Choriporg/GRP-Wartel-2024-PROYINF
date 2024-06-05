@@ -1,56 +1,83 @@
 /* App.css */
 body {
+  margin: 0;
+  font-family: "Courier New", Courier, monospace;
   background-color: black;
+  color: #00ff00;
 }
 
-.App {
-  /* "visor de imagenes DICOM"*/
+.App-header {
+  text-align: center;
+  padding: 10px;
+  background-color: #000;
+  border-bottom: 2px solid #00ff00;
+}
+
+.App-header h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.buttons-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-  color: green;
+  justify-content: space-between;
+  padding: 10px;
 }
 
-input[type="file"] {
-  border: none;
-  outline: none;
-  background-color: black;
-  color: green;
-  font-size: 16px;
-  padding: 10px 20px;
+.left-buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.left-buttons button,
+.right-button button {
+  background-color: #000;
+  color: #00ff00;
+  border: 1px solid #00ff00;
+  padding: 10px;
+  margin: 5px;
   cursor: pointer;
-  border: 2px solid green;
-  border-radius: 5px;
 }
 
-
-input[type="file"]:hover {
-  border-color: darkgreen;
-}
-
-.image-container {
-  margin-top: 20px;
-}
-
-img {
-  width: 100%;
-  min-width: 100px;
-  max-width: 500px;
-  border: 2px solid green;
-  border-radius: 5px;
-}
-
-
-/* App.css */
-.dicom-image {
+.left-buttons .sub-menu {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  position: realtive;
+  margin-top: 5px;
+}
+
+.left-buttons .sub-menu button {
+  margin: 5px 0;
+}
+
+.red-button {
+  background-color: red;
+  color: white;
+}
+
+main {
+  display: flex;
+  height: calc(100vh - 100px);
+}
+
+.info-section {
+  width: 30%;
+  padding: 20px;
+  border-right: 2px solid #00ff00;
+  overflow-y: auto;
+}
+
+.dicom-image {
+  width: 70%;
+  display: flex;
   justify-content: center;
+  align-items: center;
+  background-color: black;
+}
+
+#dicomImage {
   width: 100%;
-  height: 100vh;
-  border: 1px solid #ccc;
+  height: 100%;
   background-color: black;
 }
