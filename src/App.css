@@ -1,16 +1,17 @@
 /* App.css */
+
 body {
   margin: 0;
   font-family: "Courier New", Courier, monospace;
   background-color: black;
-  color: #00ff00;
+  color: #00ff00; /* Color de texto verde */
 }
 
 .App-header {
   text-align: center;
   padding: 10px;
   background-color: #000;
-  border-bottom: 2px solid #00ff00;
+  border-bottom: 2px solid #00ff00; /* Borde inferior verde */
 }
 
 .App-header h1 {
@@ -28,13 +29,14 @@ body {
   display: flex;
   flex-direction: row;
   align-items: center;
+  position: relative;
 }
 
 .left-buttons button,
 .right-button button {
   background-color: #000;
-  color: #00ff00;
-  border: 1px solid #00ff00;
+  color: #00ff00; /* Texto verde */
+  border: 1px solid #00ff00; /* Borde verde */
   padding: 10px;
   margin: 5px;
   cursor: pointer;
@@ -43,8 +45,10 @@ body {
 .left-buttons .sub-menu {
   display: flex;
   flex-direction: column;
-  position: realtive;
-  margin-top: 5px;
+  position: absolute;
+  top: 40px;
+  left: 0;
+  z-index: 1;
 }
 
 .left-buttons .sub-menu button {
@@ -64,8 +68,33 @@ main {
 .info-section {
   width: 30%;
   padding: 20px;
-  border-right: 2px solid #00ff00;
+  border-right: 2px solid #00ff00; /* Borde derecho verde */
   overflow-y: auto;
+}
+
+.info-section p {
+  color: #00ff00; /* Color de texto verde */
+}
+
+.annotation-section {
+  width: 30%;
+  padding: 20px;
+  border-left: 2px solid #00ff00; /* Borde izquierdo verde */
+  overflow-y: auto;
+}
+
+.annotation-section h2 {
+  color: #00ff00; /* Color de texto verde */
+}
+
+.annotation-section textarea {
+  width: 96%;
+  height: 79%;
+  padding: 10px;
+  margin-top: 10px;
+  background-color: #000;
+  color: #00ff00; /* Texto verde */
+  border: 1px solid #00ff00; /* Borde verde */
 }
 
 .dicom-image {
@@ -74,6 +103,7 @@ main {
   justify-content: center;
   align-items: center;
   background-color: black;
+  position: relative;
 }
 
 #dicomImage {
