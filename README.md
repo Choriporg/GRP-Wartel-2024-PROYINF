@@ -19,8 +19,8 @@ Puede visitar la wiki en el siguiente [enlace](https://github.com/Choriporg/GRP-
 - Para ejecutar la aplicación:
     <code> npm start </code>
 
-- Pequeño video demostrativo:
-    [enlace](https://youtu.be/j-wqAHutZD4)
+- Video demostrativo:
+    [enlace](https://youtu.be/JrEuMTnXQPE)
 ### Troubleshooting:
 
 - En caso de que no se encuentre una dependencia:
