@@ -1,7 +1,7 @@
 ## GRP-Telware-2024-PROYINF 
 
 
-### Grupo Telware:
+### Grupo Wartel:
 - Ignacio González 👾 rol: 202104693-3
 - Javiera Fuentes ⛄ rol: 202110518-2
 - Cristian Pizarro 🎱rol: 202104634-8
