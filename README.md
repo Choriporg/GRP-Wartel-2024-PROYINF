@@ -4,7 +4,7 @@
 ### Grupo Telware:
 - Ignacio González 👾 rol: 202104693-3
 - Javiera Fuentes ⛄ rol: 202110518-2
-- Cristian Pizarro 🎱rol: 
+- Cristian Pizarro 🎱rol: 202104634-8
 - Vicente Moya 🔰 rol: 201873601-5
  
 ### Wiki del proyecto 
