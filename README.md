@@ -1,10 +1,11 @@
 ## GRP-Telware-2024-PROYINF 
 
+## Este proyecto seguira siendo trabajado.
 
 ### Grupo Wartel:
 - Ignacio González 👾 rol: 202104693-3
 - Javiera Fuentes ⛄ rol: 202110518-2
-- Cristian Pizarro 🎱rol: 202104634-8
+- Cristian Pizarro 🐀 rol: 202104634-8
 - Vicente Moya 🔰 rol: 201873601-5
  
 ### Wiki del proyecto 
