@@ -10,6 +10,18 @@ Actualmente el proyecto se encuentra en periodo de migración 🚫
 ### Wiki 📖:
 Para mayor información sobre el proyecto favor dirigirse a nuestra wiki en el [siguiente enlace](https://github.com/Choriporg/GRP-Wartel-2024-PROYINF/wiki).
 
+---
+### Ejecuicion :speech_balloon: :
+Para ejecutar el proyecto, es necesario tener instaladas las librerias:
+- Pydicom [Documentación](https://pydicom.github.io/pydicom/stable/tutorials/installation.html)
+- Matplotlib-pyplot [Documentación](https://matplotlib.org/stable/users/explain/quick_start.html)
+- Numpy  [Documentación](https://numpy.org/install/)
+
+  <code> pip install pydicom <\code>
+  <code> pip install matplotlib.pyplot <\code>
+  <code> pip install numpy <\code>
+
+  Para ejecutar utiice: <code> python dicom-viewer.py> en el terminal.
 ----
 ### Integrantes 🐤:
 - Ignacio González 👾 rol: 202104693-3
