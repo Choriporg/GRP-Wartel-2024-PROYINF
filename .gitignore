@@ -1,0 +1,57 @@
+# Ignorar archivos y directorios de Python
+*.pyc
+__pycache__/
+*.pyo
+*.pyd
+*.pdb
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Archivos y carpetas creadas por entornos virtuales
+env/
+venv/
+ENV/
+ENV.bak/
+venv.bak/
+.Python
+
+# Archivos de configuración de FastAPI/Uvicorn
+*.log
+*.sqlite3
+
+# Ignorar archivos de cache y temporales
+*.swp
+*.swo
+*.swn
+*.tmp
+
+# Archivos de imágenes procesadas en el backend
+backend/processed_images/
+backend/dicoms/
+
+# Ignorar archivos y carpetas de npm en React
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnp/
+.pnp.js
+.cache/
+
+# Archivos y directorios de creación de React
+build/
+dist/
+
+# Ignorar configuraciones de IDE/editores
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+*.code-workspace
+
+# Ignorar configuraciones de sistema operativo
+.DS_Store
+Thumbs.db
