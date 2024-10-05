@@ -1,23 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import UploadView from './components/UploadView';
+import DicomViewer from './components/DicomViewer';
 
 function App() {
+  const [filename, setFilename] = useState(null);
+
+  const handleUploadComplete = (filename) => {
+    setFilename(filename);
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {!filename ? (
+        <UploadView onUploadComplete={handleUploadComplete} />
+      ) : (
+        <DicomViewer filename={filename} />
+      )}
     </div>
   );
 }
