@@ -20,7 +20,7 @@ const UploadView = ({ onUploadComplete }) => {
 
     axios.post('http://127.0.0.1:8000/upload/', formData)
       .then(response => {
-        onUploadComplete(response.data.filename);
+        onUploadComplete(response.data.filename);  // Cambiar a la vista del visor
       })
       .catch(error => {
         console.error('Error al subir el archivo', error);
