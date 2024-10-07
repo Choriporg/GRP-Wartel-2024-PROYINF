@@ -8,14 +8,13 @@ class TestImprimirImagen(unittest.TestCase):
     def setUpClass(cls):
         pass
 
-    def test_imprimirImagen(self):
+    def test_imprimirNoDicom(self):
         # Prueba básica de la función imprimirImagen
-        imagenes = [np.random.rand(10, 10) for _ in range(2)]  # Simular dos imágenes aleatorias
-        cantidad = 2
+        imagen = [np.random.rand(10, 10)]  # Simular una imagen distinta a Dicom
 
         # Intentamos ejecutar la función y verificamos que no lance errores
         try:
-            imprimirImagen(imagenes, cantidad)
+            imprimirImagen(imagen)
         except Exception as e:
             self.fail(f"imprimirImagen lanzó una excepción inesperada: {e}")
 
@@ -25,4 +24,5 @@ class TestImprimirImagen(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
 
