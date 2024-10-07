@@ -17,11 +17,11 @@ Para ejecutar el proyecto, es necesario tener instaladas las librerias:
 - Matplotlib-pyplot [Documentación](https://matplotlib.org/stable/users/explain/quick_start.html)
 - Numpy  [Documentación](https://numpy.org/install/)
 
-  <code> pip install pydicom <\code>
-  <code> pip install matplotlib.pyplot <\code>
-  <code> pip install numpy <\code>
+  <code> pip install pydicom </code>  
+  <code> pip install matplotlib.pyplot </code>  
+  <code> pip install numpy </code>  
 
-  Para ejecutar utiice: <code> python dicom-viewer.py> en el terminal.
+  Para ejecutar utiice: <code> python dicom_viewer.py </code> en la terminal.
 ----
 ### Integrantes 🐤:
 - Ignacio González 👾 rol: 202104693-3
