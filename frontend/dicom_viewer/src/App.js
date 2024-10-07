@@ -3,21 +3,22 @@ import UploadView from './components/UploadView';
 import DicomViewer from './components/DicomViewer';
 
 function App() {
-  const [filename, setFilename] = useState(null);
+  const [filenames, setFilenames] = useState([]);
 
-  const handleUploadComplete = (filename) => {
-    setFilename(filename);
+  const handleUploadComplete = (uploadedFilenames) => {
+    setFilenames(uploadedFilenames); // Actualiza la lista de nombres de archivos
   };
 
   return (
     <div className="App">
-      {!filename ? (
+      {filenames.length === 0 ? (
         <UploadView onUploadComplete={handleUploadComplete} />
       ) : (
-        <DicomViewer filename={filename} />
+        <DicomViewer filenames={filenames} />
       )}
     </div>
   );
 }
 
 export default App;
+
