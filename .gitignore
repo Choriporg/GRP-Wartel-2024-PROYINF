@@ -29,7 +29,7 @@ venv.bak/
 *.tmp
 
 # Archivos de imágenes procesadas en el backend
-backend/processed_images/
+backend/processed/
 backend/dicoms/
 
 # Ignorar archivos y carpetas de npm en React
