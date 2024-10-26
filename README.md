@@ -1,28 +1,135 @@
-# Proyecto inf225: Grupo Wartel 📼
+# DICOM Viewer - Matrix Style📼
 
-Este es el repositorio oficial para el proyecto semestral del grupo WARTEL, el cual busca crear un visualizador web de imágenes DICOM, teniendo la capacidad de operar sobre las mismas (insertando figuras, zoom, etc) y entregando información relevante sobre ésta. Además de permitir emitir un informe en pdf con las anotaciones realizadas en la plataforma.
+Este proyecto es una aplicación web para visualizar y trabajar con imágenes DICOM, inspirada en la estética de la película *Matrix* (1999). Ofrece funcionalidades avanzadas como selección de puntos para medir distancias, anotaciones en PDF, control de zoom y ajuste de contraste mediante colormaps (el proyecto sigue en desarrollo por lo que habrá mas funcionalidades).
 
----
-### Estado del proyecto ⌚️:
-Actualmente el proyecto se encuentra en periodo de migración 🚫
+## Características
 
----
-### Wiki 📖:
-Para mayor información sobre el proyecto favor dirigirse a nuestra wiki en el [siguiente enlace](https://github.com/Choriporg/GRP-Wartel-2024-PROYINF/wiki).
+- **Visualización de imágenes DICOM** en un estilo visual de *Matrix*.
+- **Selección de puntos** para medir la distancia en milímetros.
+- **Zoom y ajuste de contraste** mediante colormaps.
+- **Sección de anotaciones** que se puede descargar en PDF.
+- **Soporte para navegar entre imágenes** usando las teclas de flechas.
 
----
-### Ejecuicion :speech_balloon: :
-Para ejecutar el proyecto, es necesario tener instaladas las librerias:
-- Pydicom [Documentación](https://pydicom.github.io/pydicom/stable/tutorials/installation.html)
-- Matplotlib-pyplot [Documentación](https://matplotlib.org/stable/users/explain/quick_start.html)
-- Numpy  [Documentación](https://numpy.org/install/)
+## Requerimientos
 
-  <code> pip install pydicom </code>  
-  <code> pip install matplotlib.pyplot </code>  
-  <code> pip install numpy </code>  
+- **Python 3.7+**
+- **Node.js** y **npm**
+- **FastAPI** como servidor backend
+- **React** como framework de frontend
+- **Dependencias adicionales**:
+  - `pydicom`, `opencv-python`, `reportlab` para el backend.
+  - `axios` para manejar las solicitudes en el frontend.
 
-  Para ejecutar utiice: <code> python dicom_viewer.py </code> en la terminal.
-----
+## Instalación y Configuración
+
+### 1. Clonar el Repositorio
+
+```bash
+git clone https://github.com/Choriporg/GRP-Wartel-2024-PROYINF.git
+cd GRP-Wartel-2024-PROYINF
+```
+
+### 2. Configuración del Backend
+
+#### Crear un Entorno Virtual e Instalar Dependencias
+
+```bash
+python -m venv env
+source env/bin/activate  # En Windows: env\Scripts\activate
+pip install fastapi uvicorn pydicom opencv-python reportlab
+```
+
+#### Ejecutar el Servidor Backend
+
+El servidor estará configurado para ejecutarse en el puerto `8000`.
+
+```bash
+uvicorn main:app --reload --port 8000
+```
+
+### 3. Configuración del Frontend
+
+#### Instalar Dependencias de Node
+
+```bash
+cd frontend  # Navega al directorio del frontend
+npm install
+```
+
+#### Ejecutar el Servidor de Desarrollo
+
+```bash
+npm start
+```
+
+El frontend se ejecutará en `http://localhost:3000`.
+
+## Estructura del Proyecto
+
+```
+/project-root
+├── /src
+│   ├── /components
+│   │   ├── DicomViewer.js      # Componente principal de visualización de DICOM
+│   │   └── UploadView.js       # Componente para cargar archivos
+│   ├── /styles
+│   │   └── style.css           # Estilo inspirado en Matrix
+│   └── App.js                  # Configuración principal del frontend
+├── /backend
+│   ├── main.py                 # API FastAPI para procesar imágenes DICOM
+│   └── dicoms/                 # Carpeta para almacenar archivos subidos
+├── README.md
+└── package.json                # Dependencias de Node.js
+```
+
+## Uso de la Aplicación
+
+### Funcionalidades Principales
+
+1. **Subir una Imagen DICOM**
+   - Usa el componente `UploadView` para seleccionar archivos DICOM desde tu computadora.
+
+2. **Visualizar y Manipular la Imagen**
+   - En la pantalla principal se muestra la imagen DICOM, con botones para aplicar colormaps (contraste) y ajustar el zoom.
+
+3. **Seleccionar Puntos y Medir Distancia**
+   - Haz clic en dos puntos cualesquiera de la imagen para ver una línea entre ellos y la distancia en milímetros (calculada según el espaciado de píxeles del archivo DICOM).
+
+4. **Escribir Anotaciones y Descargar en PDF**
+   - Escribe anotaciones en el cuadro de texto de la derecha y haz clic en "Descargar PDF" para guardar un archivo con las anotaciones y detalles del paciente.
+
+### Controles del Teclado
+
+- **Flechas Izquierda/Derecha**: Cambiar entre las imágenes cargadas.
+- **Zoom con Scroll del Mouse**: Usa el scroll para acercar o alejar la imagen en el `canvas`.
+
+## Personalización del Estilo
+
+El estilo visual de la aplicación está definido en el archivo `style.css`, ubicado en `/src/styles/style.css`. Este archivo utiliza colores y tipografía inspirados en *Matrix* (1999), con tonos de verde neón sobre un fondo negro.
+
+```css
+/* Fragmento de estilo de ejemplo */
+body, html {
+    background-color: #000;
+    color: #00ff41;
+    font-family: 'Courier New', Courier, monospace;
+}
+```
+
+Puedes modificar este archivo para ajustar los colores, tipografía o tamaño de los elementos según tus preferencias.
+
+## Posibles Errores y Soluciones
+
+1. **Error 404 al intentar cargar una imagen DICOM**
+   - Asegúrate de que el servidor backend esté ejecutándose en el puerto 8000 y que el archivo DICOM esté en la carpeta `dicoms/`.
+
+2. **Problemas con la instalación de dependencias**
+   - Verifica que `pydicom`, `opencv-python` y `reportlab` estén instalados en el entorno virtual. Usa `pip install <package>` para instalar cualquier dependencia faltante.
+
+3. **Problemas con CORS al conectar el frontend y el backend**
+   - Si encuentras problemas relacionados con CORS, asegúrate de que el middleware de CORS en `main.py` esté configurado para permitir todas las solicitudes de origen cruzado.
+
+
 ### Integrantes 🐤:
 - Ignacio González 👾 rol: 202104693-3
 - Javiera Fuentes ⛄ rol: 202110518-2

@@ -1,0 +1,120 @@
+/* Fondo general y tipografía */
+body, html {
+    background-color: #000; /* Fondo negro */
+    color: #00ff41; /* Verde neón */
+    font-family: 'Courier New', Courier, monospace; /* Tipografía consola */
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+h1, h3 {
+    color: #00ff41; /* Verde neón */
+    text-shadow: 0px 0px 8px #00ff41;
+}
+
+button {
+    background-color: transparent;
+    border: 1px solid #00ff41;
+    color: #00ff41;
+    padding: 8px 16px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Courier New', Courier, monospace;
+    text-transform: uppercase;
+}
+
+button:hover {
+    background-color: #00ff41;
+    color: #000;
+    text-shadow: 0px 0px 8px #000;
+}
+
+textarea {
+    background-color: #000;
+    color: #00ff41;
+    border: 1px solid #00ff41;
+    padding: 10px;
+    resize: none;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+input[type="file"] {
+    color: #00ff41;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+input[type="file"]::file-selector-button {
+    background-color: #00ff41;
+    color: #000;
+    border: none;
+    padding: 5px 10px;
+    font-family: 'Courier New', Courier, monospace;
+    cursor: pointer;
+}
+
+canvas {
+    border: 2px solid #00ff41;
+    box-shadow: 0px 0px 12px #00ff41;
+    max-width: 90%;
+    max-height: 90%;
+}
+
+/* Contenedores principales */
+.container {
+    display: flex;
+    height: 90vh;
+    width: 90vw;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #00ff41;
+    box-shadow: 0px 0px 20px #00ff41;
+    overflow: hidden;
+}
+
+/* Sección de controles */
+.controls, .annotations {
+    border: 1px solid #00ff41;
+    padding: 20px;
+    margin: 10px;
+    flex: 1;
+    box-shadow: 0px 0px 8px #00ff41;
+}
+
+.controls {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.annotations {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Botones de colormap */
+.colormap-buttons {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+/* Estilo para la distancia */
+.distance-text {
+    color: #00ff41;
+    font-size: 1.2em;
+    text-shadow: 0px 0px 8px #00ff41;
+    margin-top: 10px;
+}
