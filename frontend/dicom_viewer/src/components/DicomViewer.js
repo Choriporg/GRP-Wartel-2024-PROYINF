@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import axios from 'axios';
+import PropTypes from 'prop-types';
 import '../styles/style.css';
 
 const DicomViewer = ({ filenames }) => {
@@ -184,6 +185,10 @@ const DicomViewer = ({ filenames }) => {
       </div>
     </div>
   );
+};
+
+DicomViewer.propTypes = {
+  filenames: PropTypes.arrayOf(PropTypes.string).isRequired
 };
 
 export default DicomViewer;
