@@ -1,0 +1,5 @@
+- upload.png tiene los resultados de la prueba de carga de imágenes, el resultado fue satisfactorio.
+
+- upload.png tiene los resultados de la prueba de descarga de imágenes, el resultado fue satisfactorio.
+
+- pdf.png tiene los resultados de la prueba de la generación de pdf, el resultado fue el esperado (falla) dado que el código para este endpoint no fue implementado correctsamente. 
